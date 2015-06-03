@@ -345,12 +345,14 @@ class SorryGame(object):
 			self.currentPlayer.completeSet()
 
 	def nextPlayer(self):
-		# Jordan
-		# set self.currentPlayer to the next player
-		pass
-		#self._players.append(self.currentPlayer)
-		#self.currentPlayer = self._players.pop(0)
-
+		if self.currentPlayer is None:
+			self.currentPlayerIndex = 0
+		else:
+			self.currentPlayerIndex += 1
+		self.currentPlayerIndex >= self.players 
+		set self.currentPlayerIndex = 0 
+		self.currentPlayer = self._players[self.currentPlayerIndex]
+				
 	def printResults(self):
 		print "Congratulations, %s ! You Won!" % self.winner
 
